@@ -1,0 +1,235 @@
+@font-face {
+    font-family: "TheJamsil5Bold";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Pretendard-Regular";
+    src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff") format("woff");
+    font-style: normal;
+  }
+
+* {
+    font-family: "Pretendard-Regular";
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    background-image: url(img/불꽃배경투명.png);
+    background-size: auto;
+    position: relative;
+
+}
+
+body #container .text {
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 25px;
+    color: #fe9e2a;
+}
+
+/* body #container .text .h1{
+    text-align: center;
+} */
+
+body #center .center-text {
+    text-align: center;
+    font-size: 35px;
+    padding: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+#login {
+    text-align: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#login .offcanvas-header .input-box {
+    text-align: left;
+    padding: 20px;
+}
+
+.text p {
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 25px;
+    color: #fe9e2a;
+}
+
+/* #container #login .loginbtn {
+    text-align: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+} */
+
+.custom-mypage-button {
+    color: #333;
+}
+
+.text a {
+    text-decoration: none;
+}
+
+.text h1:hover {
+    color: #ffcd90;
+    /* text-shadow: 2px 2px 2px #fe9e2a; */
+    transition: font-size 0.4s;
+}
+
+.text a h1 {
+    margin-left: 20px;
+    color: #fe9e2a;
+    font-size: 45px;
+}
+
+label {
+    font-weight: bold;
+}
+
+#calendar {
+    text-align: center;
+}
+
+.input-box {
+    display: inline-block;
+    border: 2.5px solid #fe9e2a;
+    padding: 30px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 1rem;
+    color: #333;
+    
+}
+
+.input-box-login {
+    display: inline-block;
+    border: 2px solid #fe9e2a;
+    text-align: center;
+    border-radius: 1rem;
+    color: #333;
+    padding: 80px;
+    margin: 50px;
+    font-size: 14px;
+
+}
+
+.input-box-login .p{
+    padding: 100px;
+}
+
+#main-festivals .input-box {
+    min-height: 400px;
+    min-width: 400px;
+}
+
+#festivals .input-box {
+    min-height: 400px;
+    min-width: 400px;
+}
+
+/* .accordion .accordion-item .accordion-header .accordion-button {
+    color: #333;
+} */
+
+/* custom-accordion-button:focus {
+    background-color: #ffcd90;
+}  */
+
+/* .custom-accordion-button:focus {
+    background-color: #ffcd90;
+    border-color: #ffcd90;
+} */
+
+
+
+.accordion-body {
+    background-color: #eaeaea;
+}
+
+button {
+    font-weight: bold;
+    font-family: "Pretendard-Regular";
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 1rem;
+    border: 2.5px solid #fe9e2a;
+    padding: 30px;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #ffcd90;
+}
+
+#main-festivals {
+    text-align: center;
+    padding: 50px;
+    font-family: "Pretendard-Regular";
+}
+
+#main-festivals .input-box {
+    margin: 10px;
+    border: 1.5px solid #fe9e2a;
+    transition: height 0.4s ease;
+    width: 350px;
+    width: 400px;
+}
+
+h2 {
+    background-color: #eaeaea;
+    border-radius: 1rem;
+    padding: 10px;
+}
+
+.accordion {
+    background-color: #f9f9f9;
+    color: #333;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-size: 16px;
+}
+
+.active, .accordion:hover {
+    background-color: #eaeaea;
+    width: 100%;
+    height: 100%;
+}
+
+.panel {
+    padding: 10px;
+    display: none;
+    background-color: #fbc888;
+    overflow: hidden;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.panel.show {
+    display: block;
+} 
+
+.input-box.expanded {
+    height: auto;
+}
+
+#result {
+    margin-top: 0px;
+    text-align: center;
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지역 축제 웹페이지</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="container">
+        <div class="text">
+          <p>대한민국은 매일 축제 중<br> Always Festival, All Festival</p>
+            <a href="wave.html">
+              <h1>✨AllFesta✨</h1>
+            </a>
+        </div>
+
+        <div id="login">
+            <button class="btn btn-warning custom-mypage-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">🟰MyPage</button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+              <div class="input-box-login">
+                <a href="mypage.html">
+                  <p><strong>마이페이지</strong></p>
+                </a>
+                <a href="login.html">
+                  <p><strong>로그인</strong></p>
+                </a>
+                <a href="membership.html">
+                  <p><strong>회원가입</strong></p>
+                </a>
+              </div>      
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <!-- <div class="offcanvas-body">
+              ...
+            </div> -->
+          </div>
+          </div>
+        </div>
+    </div>
+
+    <div id="center">
+      <div class="center-text">
+          <p>어디로 떠나시나요?</p>
+      </div>
+    </div>
+
+    <div id="calendar">
+      <div class="input-box">
+        <label for="province">날짜 : </label>
+        <input type="date" id="selected-date">
+        <!-- <button id="submit-button">Submit</button> -->
+      </div>
+  
+      <div class="input-box">
+          <label for="province">도 : </label>
+          <select id="province">
+          <option value="서울">서울</option>
+          <option value="경기도">경기도</option>
+          <option value="강원도">강원도</option>
+          <option value="경상남도">경상남도</option>
+          <option value="경상북도">경상북도</option>
+          <option value="전라남도">전라남도</option>
+          <option value="전라북도">전라북도</option>
+          <option value="충청남도">충청남도</option>
+          <option value="충청북도">충청북도</option>
+          <option value="제주도">제주도</option>
+          </select>
+      </div>
+      
+      <div class="input-box">
+          <label for="city">시/군/구 : </label>
+          <select id="city">
+          <option value="강남구">강남구</option>
+          <option value="서초구">서초구</option>
+          <!-- 추가적인 시/군/구 옵션들을 여기에 추가할 수 있습니다. -->
+          </select>
+      </div>
+      
+      <button onclick="searchFestivals()">로 떠나기</button>
+      
+      <div id="result"></div>
+    </div>
+
+    <div id="main-festivals">
+      <div class="input-box">
+        <h2># 인기 키워드</h2>
+          <button class="accordion"># 아이와 함께</button>
+          <!-- <div class="panel">
+          
+          </div> -->
+          <button class="accordion"># 애견동반</button>
+          <!-- <div class="panel">
+            23.03.25 ~ 04.03<br>창원시 진해군
+          </div> -->
+          <button class="accordion"># 부모님과 함께</button>
+          <!-- <div class="panel">
+            23.04.28 ~ 04.30<br>강원도 영월군
+          </div> -->
+          <button class="accordion"># 연인과 함께</button>
+          <!-- <div class="panel">
+            23.03.18 ~ 04.02<br>서천군 마량진항
+          </div> -->
+          <button class="accordion"># 자연</button>
+          <!-- <div class="panel">
+            23.03.32 ~ 04.02<br>서귀포시 포선면
+          </div> -->
+      </div>
+
+      <div class="input-box">
+        <h2># 인기 축제</h2>
+          <button class="accordion">1. 옥천 묘목 축제</button>
+          <div class="panel">
+            23.03.31 ~ 04.02<br>옥천군 이원면
+          </div>
+          <button class="accordion">2. 진해 군항제</button>
+          <div class="panel">
+            23.03.25 ~ 04.03<br>창원시 진해군
+          </div>
+          <button class="accordion">3. 단종문화제(예정)</button>
+          <div class="panel">
+            23.04.28 ~ 04.30<br>강원도 영월군
+          </div>
+          <button class="accordion">4. 사천 동백꽃 쭈꾸미 축제</button>
+          <div class="panel">
+            23.03.18 ~ 04.02<br>서천군 마량진항
+          </div>
+          <button class="accordion">5. 서귀포 유채꽃 축제</button>
+          <div class="panel">
+            23.03.32 ~ 04.02<br>서귀포시 포선면
+          </div>
+      </div>
+      
+      <div class="input-box">
+        <h2># 방문자 많은 축제</h2>
+        <button class="accordion">1. 옥천 묘목 축제</button>
+        <div class="panel">
+          23.03.31 ~ 04.02<br>옥천군 이원면
+        </div>
+        <button class="accordion">2. 진해 군항제</button>
+        <div class="panel">
+          23.03.25 ~ 04.03<br>창원시 진해군
+        </div>
+        <button class="accordion">3. 단종문화제(예정)</button>
+        <div class="panel">
+          23.04.28 ~ 04.30<br>강원도 영월군
+        </div>
+        <button class="accordion">4. 사천 동백꽃 쭈꾸미 축제</button>
+        <div class="panel">
+          23.03.18 ~ 04.02<br>서천군 마량진항
+        </div>
+        <button class="accordion">5. 서귀포 유채꽃 축제</button>
+        <div class="panel">
+          23.03.32 ~ 04.02<br>서귀포시 포선면
+        </div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+</html>
